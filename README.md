@@ -1,2 +1,2 @@
-# hashcode-2020
-Peas in a Pod
+# Hashcode 2020
+Team Peas in a Pod
