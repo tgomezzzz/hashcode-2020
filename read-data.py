@@ -102,15 +102,15 @@ if __name__ == "__main__":
         bestCacheId = getBestCache(i)
         #print("best cache: " + str(bestCacheId))
         if (bestCacheId != -1):
-            videoList = solution.get(bestCacheId, [])
+            videoSet = solution.get(bestCacheId, set())
             #print("Current video list: " + str(videoList))
-            videoList.append(i[2])
-            solution[bestCacheId] = videoList
+            videoSet.add(i[2])
+            solution[bestCacheId] = videoSet
             #print("New video list: " + str(solution[bestCacheId]))
         #print("No cache for video " + str(i[2]))
 
     #print()
-    #print("SOLUTION: " + str(solution))
+    print("SOLUTION: " + str(solution))
 
     filename = "solutions" + sys.argv[1][4:][:-3] + ".out"
     solutionFile = open(filename, "w")
